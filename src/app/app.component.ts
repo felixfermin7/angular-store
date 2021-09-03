@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-store';
+
+  items =  ['apple', 'orange', 'peach'];
+
+  addItem() {
+    this.items.push('new item');
+  }
+
+  deleteItem(index: number) {
+    this.items.splice(index, 1);
+  }
 }
